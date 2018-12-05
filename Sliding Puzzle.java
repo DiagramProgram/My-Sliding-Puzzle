@@ -1,8 +1,9 @@
 //3x3 sliding puzzle of Iron Man
+//Level one
 //Background starts off as red but turns green when puzzle is solved
 //All pieces also become disabled when the puzzle is solved
 //X-marker piece gets replaced by real picture when puzzle is solved
-//(Only one move is required to be made to solve the puzzle for simplicity purposes - could be changed to varying levels of complexity)
+//(Only one move is required to be made to solve the puzzle for simplicity purposes - but could be changed to varying levels of complexity)
 //Coded by: Yuktesh
 import java.awt.*;
 import java.awt.event.*;
