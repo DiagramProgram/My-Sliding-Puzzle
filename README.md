@@ -1,1 +1,1 @@
-# My-Sliding-Puzzle
+# Sliding-Puzzle-Game
