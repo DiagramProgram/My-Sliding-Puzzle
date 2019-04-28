@@ -1,0 +1,38 @@
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+
+public class SoundPlayer {
+  public static void main (String args[]) {
+    new soundPlayer ();
+  }
+  
+  public SoundPlayer () {
+ playSound ("GameMusic.wav");
+}
+//The code is commented properly, it explains itself, but then once you do that, type: playSound(“filenamegoeshere.extensionname”) in your main method to call the file, if the file is not found, that’s cause your audio file gotta be in the same
+
+//A method used to play audio files (compatibility is guaranteed only with .wav files)
+  public void playSound(String audioFileName) {
+    
+    //Tries the code, but provides a "catch" to handle any exceptions
+    try {
+       
+      //Opens an audio input stream
+      AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundPlayer.class.getResource(audioFileName));
+      
+      //Gets a sound clip resource
+      Clip clip = AudioSystem.getClip();
+      
+      //Open audio clip and loads clip from the audio input stream.
+      clip.open(audioIn);
+      
+      //Starts clip
+      clip.start();
+      
+      //In case of error, message to console is printed
+    } catch (Exception ex) {
+      System.out.println("Customized Error 404! AudioFile Not Found!\nCould be due to user settings");
+    }
+  }
+}
